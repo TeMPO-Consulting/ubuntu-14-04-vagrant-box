@@ -8,12 +8,15 @@ vagrant box add ubuntu-14-04 https://oss-binaries.phusionpassenger.com/vagrant/b
 
 # Edit Vagrantfile
 set share folder on any other dir you want (than ../../vmshared)
+
 config.vm.synced_folder "../../vmshared", "/vagrant_data"
 
 # Start (and provision at 1st up)
 vagrant up
+
 vagrant ssh
 
 # Provision (after 1st up)
 vagrant up
+
 vagrant provision
